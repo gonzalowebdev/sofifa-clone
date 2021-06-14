@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/panel.css">
+    <title>Admin Panel</title>
+</head>
+<body>
+    <div class="nav-panel">
+        <div class="brand" style="display: flex; align-items: center;">
+            <h1 style=" margin-right: 30px;"><a href="/panel">SOFIFA</a></h1>
+            <div>
+                <h5><a href="/">Home</a></h5>
+            </div>
+        </div>
+        <div class="user-data"><h4>user</h4></div>
+    </div>
+    <div class="main-panel">
+        <div class="aside-panel">
+            <div class="title"></div>
+            <div class="card-panel-aside">
+                <a href="/panel/players">Players</a>
+            </div>
+            <div class="card-panel-aside">
+                <a href="/panel/teams">Teams</a>
+            </div>
+            <div class="card-panel-aside">
+                <a href="/panel/nateams">National Teams</a>
+            </div>
+        </div>
+        <div class="content-panel">
+            <div>
+                <a href="/new" class="btn btn-bordered">New player</a>
+            </div>
+            <div style="margin-top: 30px;">
+                <h3>ALL PLAYERS</h3>
+                <div style="margin-top: 30px;">
+                    <% players.forEach(player =>{%>
+                    <div class="card-panel-item">
+                        <div class="data-item">
+                            <img src="/img/<%= player.pic%>" height="100%" style="margin-right:30px;">
+                            <div><%= player.shortname %></div>
+                            <div><%= player.age %>y.o.</div>
+                            <div><%= player.team %></div>
+                        </div>
+                        <div class="accion-item" style="display: flex; align-items: center;">
+                            <button class="btn-accion">
+                                <a href="/edit/<%= player._id%>">Edit</a>
+                            </button>
+                            <div>
+                                <form action="/delete/<%= player._id%>?_method=DELETE" method="POST">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" class="btn-accion">Delete</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <%})%>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

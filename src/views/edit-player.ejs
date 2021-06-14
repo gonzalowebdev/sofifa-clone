@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/panel.css">
+    <title>Admin Panel</title>
+</head>
+<body>
+    <div class="nav-panel">
+        <div class="brand" style="display: flex; align-items: center;">
+            <h1 style=" margin-right: 30px;"><a href="/panel">SOFIFA</a></h1>
+            <div>
+                <h5><a href="/">Home</a></h5>
+            </div>
+        </div>
+        <div class="user-data"><h4>user</h4></div>
+    </div>
+    <div class="main-panel">
+        <div class="aside-panel">
+            <div class="title"></div>
+            <div class="card-panel-aside">
+                <a href="/panel/players">Players</a>
+            </div>
+            <div class="card-panel-aside">
+                <a href="/panel/teams">Teams</a>
+            </div>
+            <div class="card-panel-aside">
+                <a href="/panel/nateams">National Teams</a>
+            </div>
+        </div>
+        <div class="content-panel">
+            <div>
+                <div class="header-player" style="margin-bottom: 0;">
+                    <div class="info-player">
+                        <div class="player-pic">
+                            <img src="/img/<%= playerdata[0].pic %>">
+                        </div>
+                        <div class="info-wrapp">
+                            <h4><%= playerdata[0].name %><span> </span><%= playerdata[0].lastname %></h4>
+                            <div class="info-data">
+                                <img src="">
+                                <a href="#" class="green"><%= playerdata[0].pos1 %></a>
+                                <a href="#" class="blue"><%= playerdata[0].pos2 %></a>
+                                <a href="#" class="green"><%= playerdata[0].pos3 %></a>
+                                <%= playerdata[0].age %>y.o. (May 28, 2000) <%= playerdata[0].altura %> <%= playerdata[0].peso %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card editplayer">
+                    <h3>Edit Player: <%= playerdata[0].shortname %></h3>
+                    <form class="formnew" action="/edit/<%= playerdata[0]._id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="_method" value="PUT">
+                        <input type="text" placeholder="Name" name="name" value="<%= playerdata[0].name %>">
+                        <input type="text" placeholder="Last Name" name="lastname" value="<%= playerdata[0].lastname %>">
+                        <input type="text" placeholder="Shortname" name="shortname" value="<%= playerdata[0].shortname %>">
+                        <input type="number" placeholder="Age" name="age" value="<%= playerdata[0].age %>">
+                        <input type="text" placeholder="Country" name="country" value="<%= playerdata[0].country %>">
+                        <input type="text" placeholder="Pos 1" name="pos1" value="<%= playerdata[0].pos1 %>">
+                        <input type="text" placeholder="Pos 2" name="pos2" value="<%= playerdata[0].pos2 %>">
+                        <input type="text" placeholder="Pos 3" name="pos3" value="<%= playerdata[0].pos3 %>">
+                        <input type="text" placeholder="Altura" name="altura" value="<%= playerdata[0].altura %>">
+                        <input type="text" placeholder="Peso" name="peso" value="<%= playerdata[0].peso %>">
+                        <input type="number" placeholder="Rating" name="rating" value="<%= playerdata[0].rating %>">
+                        <input type="number" placeholder="Potential" name="potential" value="<%= playerdata[0].potential %>">
+                        <input type="text" placeholder="Value" name="value" value="<%= playerdata[0].value %>">
+                        <input type="text" placeholder="Salary" name="salary" value="<%= playerdata[0].salary %>">
+                        <input type="text" placeholder="Release Clause" name="releaseclause" value="<%= playerdata[0].releaseclause %>">
+                        <input type="text" placeholder="Team" name="team" value="<%= playerdata[0].team %>">
+                        <input type="text" placeholder="Foot" name="foot" value="<%= playerdata[0].foot %>">
+                        <input type="text" placeholder="Skills" name="skills" value="<%= playerdata[0].skills %>">
+                        <input type="text" placeholder="Weak Foot" name="weakfoot" value="<%= playerdata[0].weakfoot %>">
+                        <input type="text" placeholder="Int. Reputation" name="reputation" value="<%= playerdata[0].reputation %>">
+                        <input type="file" value="Select Img" name="pic">
+                        <button type="submit" class="btn btn-block">Update</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

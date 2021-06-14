@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://sofifa.com/launcher-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>SoFifa | FIFA 21</title>
+</head>
+<body>
+    <header>
+        <div class="nav1">
+            <div class="container">
+                <div class="subnav1">
+                    <div class="subnav1-2">
+                        <a href="/"><img src="/img/logo.webp" style="height: 30px;margin-right: 15px ;"></a>
+                        <a href="#" class="tab">Players</a>
+                        <a href="#" class="tab">teams</a>
+                        <a href="#" class="tab">squads</a>
+                        <a href="#" class="tab">shortlists</a>
+                        <a href="#" class="tab">discussions</a>
+                    </div>
+                    <div class="useraccion">sign in</div>
+                </div>
+            </div>
+        </div>
+        <div class="nav2">
+            <div class="container">
+                <div class="subnav2">
+                    <h2><%= playerdata.shortname %></h2>
+                    <div class="subnav2-1">
+                        <div class="dropdown">fifa 21</div>
+                        <div class="dropdown">april 13, 2021</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav3">
+            <div class="container">
+                <div class="subnav3">
+                    <div class="subnav3-1">
+                        <a href="" class="tab">All</a>
+                        <a href="" class="tab">Added</a>
+                        <a href="" class="tab">Updated</a>
+                        <a href="" class="tab">Free</a>
+                        <a href="" class="tab">On Loan</a>
+                        <a href="" class="tab">Removed</a>
+                        <a href="" class="tab">Customized</a>
+                        <a href="" class="tab">Create Player</a>
+                        <a href="" class="tab">Calculator</a>
+                    </div>
+                    <div class="search">
+                        <input type="search" placeholder="Search player...">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="container">
+            <div class="mainwrapp">
+                <div class="aside">
+                    <div class="card cardfield">
+                        <h4>REAL OVERAL RATING</h4>
+                        <div class="field">
+                            <div class="lineup">
+                                <div class="area-lineup">
+                                    <div class="item-lineup">LS<br> 83+2</div>
+                                    <div class="item-lineup">ST<br> 83+2</div>
+                                    <div class="item-lineup">RS<br> 83+2</div>
+                                </div>
+                                <div class="area-lineup">
+                                    <div class="item-lineup">LS<br> 83+2</div>
+                                    <div class="item-lineup">ST<br> 83+2</div>
+                                    <div class="item-lineup">RS<br> 83+2</div>
+                                    <div class="item-lineup">RS<br> 83+2</div>
+                                    <div class="item-lineup">RS<br> 83+2</div>
+                                </div>
+                                <div class="area-lineup">
+                                    <div class="item-lineup">LS<br> 83+2</div>
+                                    <div class="item-lineup">ST<br> 83+2</div>
+                                    <div class="item-lineup">RS<br> 83+2</div>
+                                </div>
+                                <div class="area-lineup">
+                                    <div class="item-lineup">LS<br> 83+2</div>
+                                    <div class="item-lineup">ST<br> 83+2</div>
+                                    <div class="item-lineup">RS<br> 83+2</div>
+                                    <div class="item-lineup">RS<br> 83+2</div>
+                                    <div class="item-lineup">RS<br> 83+2</div>
+                                </div>
+                                <div class="area-lineup">
+                                    <div class="item-lineup">LS<br> 83+2</div>
+                                    <div class="item-lineup">ST<br> 83+2</div>
+                                    <div class="item-lineup">RS<br> 83+2</div>
+                                    <div class="item-lineup">RS<br> 83+2</div>
+                                    <div class="item-lineup">RS<br> 83+2</div>
+                                </div>
+                                <div class="area-lineup">
+                                    <div class="item-lineup">LS<br> 83+2</div>
+                                    <div class="item-lineup">ST<br> 83+2</div>
+                                    <div class="item-lineup">RS<br> 83+2</div>
+                                    <div class="item-lineup">RS<br> 83+2</div>
+                                    <div class="item-lineup">RS<br> 83+2</div>
+                                </div>
+                                <div class="area-lineup">
+                                    <div class="item-lineup">LS<br> 83+2</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="principal">
+                    <div class="header-player">
+                        <div class="info-player">
+                            <div class="player-pic">
+                                <img src="/img/<%= playerdata[0].pic %>">
+                            </div>
+                            <div class="info-wrapp">
+                                <h4><%= playerdata[0].name %><span> </span><%= playerdata[0].lastname %></h4>
+                                <div class="info-data">
+                                    <img src="/img/<%= playerdata[0].national.flag %>">
+                                    <a href="#" class="green"><%= playerdata[0].pos1 %></a>
+                                    <a href="#" class="blue"><%= playerdata[0].pos2 %></a>
+                                    <a href="#" class="green"><%= playerdata[0].pos3 %></a>
+                                    <%= playerdata[0].age %>y.o. (May 28, 2000) <%= playerdata[0].altura %> <%= playerdata[0].peso %>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-stats">
+                        </div>
+                    </div>
+                    <div class="main-information">
+                        <div class="card">
+                            <h5>
+                                PROFILE
+                            </h5>
+                            <div>Preferred foot<span><%= playerdata[0].foot %></span></div>
+                            <div><%= playerdata[0].weakfoot %> ★ Weak Foot</div>
+                            <div><%= playerdata[0].skills %> ★ Skill Moves</div>
+                            <div><%= playerdata[0].reputation %> ★ International Reputation</div>
+                            <div>Work Rate<span>High/ Medium</span></div>
+                            <div>Body Type<span>Lean (170-185)</span></div>
+                            <div>Real Face<span>Yes</span></div>
+                            <div>Release Clause<span>€<%= playerdata[0].releaseclause %></span></div>
+                            <div>ID<span><%= playerdata[0]._id %></span></div>
+                        </div>
+                        <div class="card">
+                            <h5>
+                                PLAYER SPECIALITIES
+                            </h5>
+                            <div>#Acrobat</div>
+                        </div>
+                        <div class="card">
+                            <h5 style="text-transform: uppercase;">
+                                <%= playerdata[0].team %>
+                            </h5>
+                            <div>
+                                <img src="/img/<%= playerdata[0].teaminfo.shield %>" width="60px">
+                            </div>
+                            <div class="ta-right"><span class="tag bggreen text-black"><%= playerdata[0].teaminfo.rating %></span> ★★★★★</div>
+                            <div class="ta-right">Position<span>SUB</span></div>
+                            <div class="ta-right">Jersey Number<span>47</span></div>
+                            <div class="ta-right">Joined<span>Jul 1, 2016</span></div>
+                            <div class="ta-right">Contract Valid Until<span>2024</span></div>
+                        </div>
+                        <div class="card">
+                            <h5 style="text-transform: uppercase;">
+                                <%= playerdata[0].country %>
+                            </h5>
+                            <div>
+                                <img src="/img/<%= playerdata[0].national.flag %>" width="60px">
+                            </div>
+                            <div class="ta-right"><span class="tag bggreen text-black"><%= playerdata[0].national.rating %></span> ★★★★★</div>
+                            <div class="ta-right">Position<span>SUB</span></div>
+                            <div class="ta-right">Jersey Number<span>47</span></div>
+                        </div>
+                    </div>
+                    <div class="likes">
+                        <likes-tabs>
+                            <div></div>
+                        </likes-tabs>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

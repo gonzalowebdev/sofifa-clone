@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/panel.css">
+    <title>Admin Panel</title>
+</head>
+<body>
+    <div class="nav-panel">
+        <div class="brand" style="display: flex; align-items: center;">
+            <h1 style=" margin-right: 30px;"><a href="/panel">SOFIFA</a></h1>
+            <div>
+                <h5><a href="/">Home</a></h5>
+            </div>
+        </div>
+        <div class="user-data"><h4>user</h4></div>
+    </div>
+    <div class="main-panel">
+        <div class="aside-panel">
+            <div class="title"></div>
+            <div class="card-panel-aside">
+                <a href="/panel/players">Players</a>
+            </div>
+            <div class="card-panel-aside">
+                <a href="/panel/teams">Teams</a>
+            </div>
+            <div class="card-panel-aside">
+                <a href="/panel/nateams">National Teams</a>
+            </div>
+        </div>
+        <div class="content-panel">
+            <div>
+                <div class="card newplayer">
+                    <h3>Player Maker</h3>
+                    <form class="formnew" action="/new" method="POST" enctype="multipart/form-data">
+                            <input type="text" placeholder="Name" name="name">
+                            <input type="text" placeholder="Last Name" name="lastname">
+                            <input type="text" placeholder="Shortname" name="shortname">
+                            <input type="number" placeholder="Age" name="age">
+                            <input type="text" placeholder="Country" name="country">
+                            <input type="text" placeholder="Pos 1" name="pos1">
+                            <input type="text" placeholder="Pos 2" name="pos2">
+                            <input type="text" placeholder="Pos 3" name="pos3">
+                            <input type="text" placeholder="Altura" name="altura">
+                            <input type="text" placeholder="Peso" name="peso">
+                            <input type="number" placeholder="Rating" name="rating">
+                            <input type="number" placeholder="Potential" name="potential">
+                            <input type="text" placeholder="Value" name="value">
+                            <input type="text" placeholder="Salary" name="salary">
+                            <input type="text" placeholder="Release Clause" name="releaseclause">
+                            <input type="text" placeholder="Team" name="team">
+                            <input type="text" placeholder="Foot" name="foot">
+                            <input type="text" placeholder="Skills" name="skills">
+                            <input type="text" placeholder="Weak Foot" name="weakfoot">
+                            <input type="text" placeholder="Int. Reputation" name="reputation">
+                            <input type="file" value="Select Img" name="pic">
+                        <button type="submit" class="btn btn-block">Create</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
